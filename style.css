@@ -735,6 +735,13 @@ h1 {
     background-color: #ffffff;
 }
 
+.page-link:focus {
+    color: #EF5B70;
+    border: none;
+    background-color: #ffffff;
+    box-shadow: none;
+}
+
 .fa-angle-left,
 .fa-angle-right {
     color: #000000;
