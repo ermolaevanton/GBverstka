@@ -4,6 +4,10 @@
     box-sizing: border-box
     outline: none
 
+@import vars
+@import mixins
+@import button
+
 body
     font-family: 'Lato', sans-serif
     font-style: normal
@@ -27,78 +31,62 @@ h3
     background-color: #222222
     height: 75px
     padding-top: 18px
-
-    &-menu
+    &__menu
         display: flex
         justify-content: space-between
         height: 100%
-
-    &-menu__left
-        display: flex
-        justify-content: space-between
-        list-style-type: none
-        width: 111px
-        align-items: flex-end
-        margin-bottom: 0
-        padding-left: 0
-
-    &-menu__right
-        display: flex
-        justify-content: space-between
-        width: 168px
-        align-items: flex-end
-        list-style-type: none
-        margin-bottom: 0
-        padding-left: 0
-
-.nav-img
-    padding-bottom: 20px
-
+        &_left
+            display: flex
+            justify-content: space-between
+            list-style-type: none
+            width: 111px
+            align-items: flex-end
+            margin-bottom: 0
+            padding-left: 0
+        &_right
+            display: flex
+            justify-content: space-between
+            width: 168px
+            align-items: flex-end
+            list-style-type: none
+            margin-bottom: 0
+            padding-left: 0
 .mega-menu
     position: relative
     padding-bottom: 20px
     z-index: 10
-
-    &:hover .mega-box
+    &:hover .mega-menu__nav
         display: block
-
-.mega-box
-    background-color: #FFFFFF
-    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
-    padding-top: 37px
-    padding-left: 34px
-    position: absolute
-    width: 232px
-    height: 764px
-    margin-top: 20px
-    display: none
-
-.mega-heading__menu
-    font-weight: 700
-    font-size: 14px
-    line-height: 17px
-    color: #000000
-    margin-bottom: 24px
-
-.mega-heading__sub
-    font-weight: 400
-    font-size: 14px
-    line-height: 17px
-    color: #F16D7F
-    margin-bottom: 12px
-
-.mega-link
-    display: block
-    font-weight: 400
-    font-size: 14px
-    line-height: 17px
-    color: #6F6E6E
-    text-decoration: none
-    margin-bottom: 11px
-    margin-left: 20px
-
+    &__nav
+        background-color: #FFFFFF
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+        padding-top: 37px
+        padding-left: 34px
+        position: absolute
+        width: 232px
+        height: 764px
+        margin-top: 20px
+        display: none
+    &__header
+        @include txt(700, 14px, 17px, #000000)
+        margin-bottom: 24px
+    &__item
+    &__header-item
+        @include txt(400, 14px, 17px, $pink)
+        margin-bottom: 12px
+    &__link
+        display: block
+        @include txt(400, 14px, 17px, #6F6E6E)
+        text-decoration: none
+        margin-bottom: 11px
+        margin-left: 20px
+        &:hover
+            color: $pink
+.nav-img
+    padding-bottom: 20px
+    transition: all 0.2s
     &:hover
-        color: #F16D7F
+        transform: scale(1.1)
 
 .top-content
     height: 764px
@@ -141,6 +129,16 @@ h1
 .offer-card
     position: relative
     text-align: center
+    transition: all 1s
+    display: block
+    width: 32%
+    & img
+        width: 100%
+    &_bot
+        width: 100%
+
+.offer-card:hover
+    transform: scale(1.1)
 
 .offer-txt-block
     position: absolute
@@ -268,6 +266,7 @@ h1
     line-height: 19px
     color: #F26376
     display: block
+    transition: all 1s
 
     &:hover
         background-color: #F26376
@@ -310,6 +309,7 @@ h1
     background-repeat: no-repeat
     height: 448px
     background-size: 100%
+    background-position: bottom
 
 .subscribe-figure-form
     display: flex
@@ -384,11 +384,12 @@ h1
     text-align: center
     color: #FFFFFF
     align-items: center
+    transition: all 1s
 
     &:hover
         color: #F16D7F
         background-color: #FFFFFF
-        border: 1px solid #F16D7F
+        // outline: 1px solid #F16D7F
 
 .footer-copyright-social__networks
     background-color: #222224
@@ -763,12 +764,6 @@ h1
     & input
         margin-right: 9px
 
-@import vars
-
-@import mixins
-
-@import button
-
 .cart-header
     height: 148px
     background-color: #F8F3F4
@@ -785,10 +780,14 @@ h1
 
 .cart-menu
     &__card
+        display: block
         box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13)
         display: flex
         width: $wid-cart-card
         margin-bottom: 40px
+        text-decoration: none
+        transition: all 0.5s
+
         & img
             width: 262px
             height: 306px
@@ -829,6 +828,8 @@ h1
             transition: all 1s
         &__button:hover
             background-color: #A4A4A4
+    &__card:hover
+        transform: scale(1.1)
 
 .cart-section
     width: 360px
@@ -889,3 +890,54 @@ h1
         background-color: #ffffff
         outline: 1px solid $pink
         color: $pink
+.reg
+    display: flex
+    justify-content: space-between
+    margin-top: 64px
+    margin-bottom: 113px
+    &__form
+        max-width: 32%
+        &__header
+            @include txt(300, 16px, 19px, #222222)
+        &__input-txt
+            width: 100%
+            min-height: 45px
+            margin-top: 21px
+            padding: 0 10px
+            border: 1px solid #A4A4A4
+            @include txt(300, 13px, 16px, #B1B1B1)
+        &__radio
+            margin-top: 31px
+            margin-bottom: 33px
+            & span
+                @include txt(300, 11px, 13px, #000000)
+                margin-left: 10px
+                margin-right: 20px
+            &__input
+                height: 17px
+                width: 17px
+        &__bot-txt
+            @include txt(300, 13px, 16px, #B1B1B1)
+            margin-top: 15px
+            margin-bottom: 55px
+        &__button
+            @include txt(400, 14px, 17px, #ffffff)
+            padding: 16px 29px
+            background-color: $pink
+            text-decoration: none
+            transition: all 1s
+            & i
+                margin-left: 20px
+        &__button:hover
+            color: $pink
+            background-color: #ffffff
+            outline: 1px solid $pink
+    &__article
+        max-width: 57%
+        &__txt
+            @include txt(300, 24px, 29px, #000000)
+            margin-bottom: 16px
+            &_2
+                margin: 22px 0
+            & i
+                margin-right: 23px
