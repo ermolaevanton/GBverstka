@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart</title>
+    <title>Registration</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,80 +58,38 @@
         </div>
     </header>
     <div class="cart-header">
-        <h2 class="cart-header__header containers">SHOPPING CART</h2>
+        <h2 class="cart-header__header containers">REGISTRATION</h2>
     </div>
-    <form class="cart containers">
-        <section class="cart-menu">
-            <a class="cart-menu__card" href="2">
-                <img src="img/card-img-3.png" alt="card-img">
-                <div class="cart-menu__card__feature">
-                    <h2 class="cart-menu__card__feature__header">MANGO PEOPLE<br> T-SHIRT</h2>
-                    <p class="cart-menu__card__feature__content">
-                        <span class="cart-menu__card__feature__content__left">Price:</span>
-                        <span
-                            class="cart-menu__card__feature__content__value cart-menu__card__feature__content__value_price">$300</span>
-                    </p>
-                    <p class="cart-menu__card__feature__content">
-                        <span class="cart-menu__card__feature__content__left">Color:</span>
-                        <span class="cart-menu__card__feature__content__value">Red</span>
-                    </p>
-                    <p class="cart-menu__card__feature__content">
-                        <span class="cart-menu__card__feature__content__left">Size:</span>
-                        <span class="cart-menu__card__feature__content__value">Xl</span>
-                    </p>
-                    <p class="cart-menu__card__feature__content">
-                        <span class="cart-menu__card__feature__content__left">Quantity:</span>
-                        <span
-                            class="cart-menu__card__feature__content__value cart-menu__card__feature__content__value_quantity">2</span>
-                    </p>
-                </div>
-                <div class="cart-menu__card__close"><i class="fa-solid fa-xmark"></i></div>
-            </a>
-            <a class="cart-menu__card" href="#">
-                <img src="img/card-img-7.png" alt="card-img">
-                <div class="cart-menu__card__feature">
-                    <h2 class="cart-menu__card__feature__header">MANGO PEOPLE<br> T-SHIRT</h2>
-                    <p class="cart-menu__card__feature__content">
-                        <span class="cart-menu__card__feature__content__left">Price:</span>
-                        <span
-                            class="cart-menu__card__feature__content__value cart-menu__card__feature__content__value_price">$300</span>
-                    </p>
-                    <p class="cart-menu__card__feature__content">
-                        <span class="cart-menu__card__feature__content__left">Color:</span>
-                        <span class="cart-menu__card__feature__content__value">Red</span>
-                    </p>
-                    <p class="cart-menu__card__feature__content">
-                        <span class="cart-menu__card__feature__content__left">Size:</span>
-                        <span class="cart-menu__card__feature__content__value">Xl</span>
-                    </p>
-                    <p class="cart-menu__card__feature__content">
-                        <span class="cart-menu__card__feature__content__left">Quantity:</span>
-                        <span
-                            class="cart-menu__card__feature__content__value cart-menu__card__feature__content__value_quantity">2</span>
-                    </p>
-                </div>
-                <div class="cart-menu__card__close"><i class="fa-solid fa-xmark"></i></div>
-            </a>
-            <div class="cart-menu__buttons">
-                <a class="cart-menu__buttons__button" href="#">CLEAR SHOPPING CART</a>
-                <a class="cart-menu__buttons__button" href="#">CONTINUE SHOPPING</a>
+    <section class="reg containers">
+        <form class="reg__form">
+            <h2 class="reg__form__header">Your Name</h2>
+            <input class="reg__form__input-txt" type="text" placeholder="First Name" required><br>
+            <input class="reg__form__input-txt" type="text" placeholder="Last Name" required><br>
+            <div class="reg__form__radio">
+                <input class="reg__form__radio__input" type="radio" name="sex" value="male"><span>Male</span>
+                <input class="reg__form__radio__input" type="radio" name="sex" value="female"><span>Female</span>
             </div>
-        </section>
-        <section class="cart-section">
-            <form class="cart-addr">
-                <h2 class="cart-addr__header">SHIPPING ADRESS</h2>
-                <input class="cart-addr__input cart-addr__input_country" type="text" placeholder="Bangladesh">
-                <input class="cart-addr__input" type="text" placeholder="State">
-                <input class="cart-addr__input" type="text" placeholder="Postcode / Zip">
-                <a class="cart-addr__button" href="#">GET A QUOTE</a>
-            </form>
-            <div class="cart-pay">
-                <p class="cart-pay__sub-total">SUB TOTAL <span class="cart-pay__sub-total__price">$900</span></p>
-                <p class="cart-pay__grand-total">GRAND TOTAL <span class="cart-pay__grand-total__price">$900</span></p>
-                <a class="cart-pay__button" href="#">PROCEED TO CHECKOUT</a>
-            </div>
-        </section>
-    </form>
+            <h2 class="reg__form__header">Login details</h2>
+            <input class="reg__form__input-txt" type="email" placeholder="Email" required><br>
+            <input class="reg__form__input-txt" type="password" placeholder="Password" required>
+            <p class="reg__form__bot-txt">Please use 8 or more characters, with at least 1 number and a mixture of
+                uppercase and lowercase letters</p>
+            <a class="reg__form__button" href="#">JOIN NOW<i class="fa-solid fa-arrow-right-long"></i></a>
+        </form>
+        <article class="reg__article">
+            <h2 class="reg__article__txt">LOYALTY HAS ITS PERKS</h2>
+            <p class="reg__article__txt reg__article__txt_2">Get in on the loyalty program where you can earn points and
+                unlock serious
+                perks. Starting with these as
+                soon as you join:</p>
+            <p class="reg__article__txt"><i class="fa-solid fa-check"></i>15% off welcome offer</p>
+            <p class="reg__article__txt"><i class="fa-solid fa-check"></i>Free shipping, returns and exchanges on all
+                orders</p>
+            <p class="reg__article__txt"><i class="fa-solid fa-check"></i>$10 off a purchase on your birthday</p>
+            <p class="reg__article__txt"><i class="fa-solid fa-check"></i>Early access to products</p>
+            <p class="reg__article__txt"><i class="fa-solid fa-check"></i>Exclusive offers & rewards</p>
+        </article>
+    </section>
     <footer class="footer">
         <section class="subscribe-section">
             <div class="containers">
