@@ -18,6 +18,21 @@
 body {
   font-family: "Lato", sans-serif;
   font-style: normal;
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.content {
+  flex: 1;
 }
 
 p {
@@ -325,7 +340,7 @@ h1 {
 
 .product-button {
   border: 1px solid #FF6A6A;
-  padding: 14px 38px;
+  padding: 14px 36px;
   margin: 0 auto;
   margin-top: 48px;
   margin-bottom: 95px;
@@ -336,6 +351,7 @@ h1 {
   color: #F26376;
   display: block;
   transition: all 1s;
+  width: 211px;
 }
 .product-button:hover {
   background-color: #F26376;
@@ -750,7 +766,7 @@ h1 {
   width: 70px;
 }
 .filter:hover .filter-mega-menu {
-  display: block;
+  display: flex;
 }
 .filter-txt {
   margin-right: 11px;
@@ -767,6 +783,7 @@ h1 {
 
 .filter-mega-menu {
   display: none;
+  flex-direction: column;
   width: 360px;
   box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
   padding-top: 13px;
@@ -775,11 +792,12 @@ h1 {
   position: absolute;
   z-index: 10;
   background-color: #ffffff;
-  top: -13px;
+  top: -9px;
   left: -16px;
 }
 .filter-mega-menu i {
   color: #EF5B70;
+  transform: translate(55px, -21px);
 }
 .filter-mega-menu span {
   color: #EF5B70;
@@ -789,6 +807,10 @@ h1 {
   height: 100%;
   align-items: center;
   margin-top: 16px;
+}
+
+.filter-details {
+  transform: translate(10px, -25px);
 }
 
 .filter-details summary {
