@@ -27,77 +27,33 @@ h3
     max-width: 1140px
     margin: 0 auto
 
-.header
-    background-color: #222222
-    height: 75px
-    padding-top: 18px
-    &__menu
-        display: flex
-        justify-content: space-between
-        height: 100%
-        &_left
-            display: flex
-            justify-content: space-between
-            list-style-type: none
-            width: 111px
-            align-items: flex-end
-            margin-bottom: 0
-            padding-left: 0
-        &_right
-            display: flex
-            justify-content: space-between
-            width: 168px
-            align-items: flex-end
-            list-style-type: none
-            margin-bottom: 0
-            padding-left: 0
-.mega-menu
-    position: relative
-    padding-bottom: 20px
-    z-index: 10
-    &:hover .mega-menu__nav
-        display: block
-    &__nav
-        background-color: #FFFFFF
-        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
-        padding-top: 37px
-        padding-left: 34px
-        position: absolute
-        width: 232px
-        height: 764px
-        margin-top: 20px
-        display: none
-    &__header
-        @include txt(700, 14px, 17px, #000000)
-        margin-bottom: 24px
-    &__item
-    &__header-item
-        @include txt(400, 14px, 17px, $pink)
-        margin-bottom: 12px
-    &__link
-        display: block
-        @include txt(400, 14px, 17px, #6F6E6E)
-        text-decoration: none
-        margin-bottom: 11px
-        margin-left: 20px
-        &:hover
-            color: $pink
-.nav-img
-    padding-bottom: 20px
-    transition: all 0.2s
-    &:hover
-        transform: scale(1.1)
+@import header
 
-.top-content
-    height: 764px
+.main
+    max-height: 764px
     background-color: #F1E4E6
 
     &__container
         display: flex
-
-    &__right
-        margin-top: 290px
-        margin-left: 233px
+        // max-height: 764px
+        max-width: 1600px
+        margin: 0 auto
+        min-height: 363px
+    &__picture
+        width: 49%
+        display: flex
+        align-items: flex-end
+        justify-content: space-around
+        & img
+            max-height: 764px
+            object-fit: cover
+            width: 100%
+    &__header
+        display: flex
+        align-items: center
+        padding-right: 16px
+        padding-left: 3%
+    &__test
         display: flex
 
 .rectangle
@@ -114,11 +70,26 @@ h1
 
 .top__content-p
     font-weight: 700
-    font-size: 32px
+    font-size: 31px
     line-height: 38px
 
     &-pink
         color: #F16D7F
+
+// @media screen and ( max-width: 1024px )
+//     h1
+//         font-size: 44px
+//         line-height: 53px
+//     .top__content-p
+//         font-size: 24px
+//         line-height: 29px
+// @media screen and ( max-width: 676px )
+//     h1
+//         font-size: 38px
+//         line-height: 46px
+//     .top__content-p
+//         font-size: 20px
+//         line-height: 24px
 
 .offer-women__men__kids
     display: flex
@@ -274,15 +245,17 @@ h1
 
 .feature
     background: #222224
+    min-height: 341px
+    display: flex
+    align-items: center
 
     &-container
         display: flex
         justify-content: space-between
-        align-items: center
-        height: 341px
+        width: 100%
 
     &-block
-        width: 360px
+        width: 30%
 
     &__img
         display: block
@@ -308,8 +281,8 @@ h1
     background-image: url(../img/footer-bckgr.jpg)
     background-repeat: no-repeat
     height: 448px
-    background-size: 100%
-    background-position: bottom
+    background-size: cover
+    background-position-x: center
 
 .subscribe-figure-form
     display: flex
@@ -321,6 +294,7 @@ h1
     display: flex
     flex-direction: column
     align-items: center
+    width: 31%
 
 .subscribe-review
     font-style: italic
@@ -329,7 +303,6 @@ h1
     line-height: 24px
     text-align: center
     color: #222224
-    width: 360px
     margin-top: 30px
 
 .subscribe-h
@@ -348,19 +321,20 @@ h1
     margin-bottom: 32px
 
 .subscribe-form
-    margin-right: 100px
+    margin-right: 9%
+    width: 32%
 
 .subscribe-input-email
     display: flex
 
 .subscribe-input
     height: 50px
-    width: 256px
+    width: 72%
     border-bottom-left-radius: 25px
     border-top-left-radius: 25px
     background-color: #E1E1E1
     border: none
-    padding-left: 22px
+    padding: 0 20px
     font-weight: 400
     font-size: 14px
     line-height: 17px
@@ -398,7 +372,7 @@ h1
     display: flex
     justify-content: space-between
     align-items: center
-    height: 80px
+    min-height: 80px
 
 .copyright
     font-weight: 400
@@ -941,3 +915,10 @@ h1
                 margin: 22px 0
             & i
                 margin-right: 23px
+
+@media screen and ( max-width: 1172px )
+    .containers
+        padding: 0 16px
+        margin: 0
+
+@import media
